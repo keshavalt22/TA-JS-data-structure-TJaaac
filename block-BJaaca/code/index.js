@@ -68,11 +68,11 @@ character.changeIsAdult = function changeIsAdult(){
 
 let keyName = 'playedBy';
 
-character["playedby"] = "maisie Willams";
+character[keyName] = "maisie Willams";
 
 // - Using `alert` alert the value stored in key you added above `keyName` use the variable name to access
 
-alert (character.playedby);
+alert (character[keyName]);
 
 // - Using the function `console.log` log the value of the key `42`. You don't have to add the key
 
@@ -84,4 +84,4 @@ character.totalSeason = 1 + 2 + 3 + 2;
 
 // - Access the value of the key `totalSeason` (it should be 8)
 
-character.totalSeason;
+console.log (character.totalSeason);
