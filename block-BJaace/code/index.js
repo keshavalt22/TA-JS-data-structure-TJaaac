@@ -1,28 +1,54 @@
 // 1. Declare an empty array and store it in a variable.
 
+let array = [];
+
 // 2. Now check the type of empty array you declared above.
+
+typeof array;
 
 // 3. Create an array named `colors` that contains five different names of colors as strings.
 
+let colors = ["red", "green", "blue", "yellow", "white"];
+
 // 4. Access the first color in the array and print it to the console using `console.log()`
+
+console.log (colors[1]);
 
 // 5. Access the third color in the array and print it to the console using `console.log()`
 
+console.log (colors[3]);
+
 // 6. Access the last color in the array and print it to the console using `console.log()`
+
+console.log (colors[4]);
 
 // 7. Write one line of code that changes the value of the first color in the list to "black" (overwriting the previous value).
 
+colors[1] = "black";
+
 // 8. Write one line of code that changes the value of the last color in the list to "ultraviolet" (overwriting the previous value).
+
+colors[colors.length] = "ultraviolet";
 
 // 9. Now, Find the length of the array named `colors`.
 
+colors.length;
+
 // 10. Create a new variable called fourthColor and set it equal to the fourth color in the list.
+
+let fourthColor = colors[4];
 
 // 11. Add another color to the end of the list.
 
+fourthColor[fourthColor.length] = "red";
+
 // 12. Add another color to the beginning of the list (use array method array.unshift('gray'))
 
+fourthColor[0] = "gray";
+
 // 13. Remove the first color from the starting of the array
+
+delete fourthColor[0];
 
 // 14. Remove the last color from the end of list, and then print the length of the array to the console one more time.
 
