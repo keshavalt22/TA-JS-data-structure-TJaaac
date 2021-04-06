@@ -124,16 +124,26 @@ let userIds = [1230, 234, 1278, 984, 763, 900];
     clear(['a', undefined, 'd', 0,  'c', 'b']); // ['b', 'c', 'd', 'a']
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
-let array = [];
-function clear(value) {
-  if(value = Number){
-    return( for (let i = value.length-1; i >= 0; i--){
-      array.push(value[i])
-    }
-    return array) 
-  }
+// let array = [];
 
-}
+// function unWanted(value) {
+//   return(value == false ||
+//     value == undefined ||
+//     value == "" ||
+//     value == 0 ||
+//     value == null)
+// }
+
+// let final = [];
+
+// function clear(arr) {
+//   for(let value of arr){
+//     if (!unWanted(value)){
+//       final.push(value)
+//     }
+//   }
+//   return final
+// }
 
 // Uncomment the code below and test the output
 // console.log(clear([1, 2, 3, 4, '', 0, null, undefined])); // [4, 3, 2, 1]
@@ -154,9 +164,16 @@ function clear(value) {
     arrayToObj(['Ryan', 'John']); // {0: 'Ryan', 1: 'John'}
 */
 
-function arrayToObj() {
-  // your code
+
+
+function arrayToObj(value) {
+  let final = {};
+  for(let i = 0; i < value.length; i++){
+    final[i] = value[i];
+  }
+  return final
 }
+
 
 // Uncomment the code below and test the output
 // console.log(arrayToObj([1, 2, 3, 4])); // {0: 1, 1: 2, 2: 3, 3: 4}
