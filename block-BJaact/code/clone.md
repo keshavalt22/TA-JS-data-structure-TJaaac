@@ -10,12 +10,12 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
-console.log(person.lastName === person2.lastName); // output
+console.log(person2.firstName); // Arya, Because person and person2 are being cloned, and the value of firstName has been updated to "Arya" 
+console.log(person.firstName); // Arya, Because person and person2 are being cloned, and the value of firstName has been updated to "Arya" 
+console.log(person.lastName); // Doe.
+console.log(person == person2); // True, because both person and person2 are clone.
+console.log(person === person2); // True, because both person and person2 are clone.
+console.log(person.lastName === person2.lastName); // Doe, because both person and person2 are clone.
 ```
 
 2. Write the output with reason:
@@ -37,17 +37,17 @@ let personTwo = { ...person };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // John, Because the value of person was copied to personTwo.
+console.log(person.firstName); // Arya, Because the value was changed from John to Arya.
+console.log(personTwo.lastName); // Doe, Because the value of person was copied to personTwo.
+console.log(person.firstName === personTwo.firstName); // False, Because they both has different address.
+console.log(person == personTwo); // False, Because they both has different address.
+console.log(person === personTwo); // False, Because they both has different address.
+console.log(person.address === personTwo.address); // False, Because they both has different address.
+console.log(person.address == personTwo.address); // False, Because they both has different address.
+console.log(personTwo.address.city); // San Jose
+console.log(person.address.city); // San Jose
+console.log(person.address.city == personTwo.address.city); // true
 ```
 
 3. Write the output with reason:
@@ -69,17 +69,17 @@ let personTwo = { ...person, address: { ...person.address } };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // John, Because the value of person was copied to personTwo.
+console.log(person.firstName); // Arya, Because the value was changed from John to Arya.
+console.log(personTwo.lastName); // Doe, Because the value of person was copied to personTwo.
+console.log(person.firstName === personTwo.firstName); // False, Because they both has different address.
+console.log(person == personTwo); // False, Because they both has different address.
+console.log(person === personTwo); // False, Because they both has different address.
+console.log(person.address === personTwo.address); // False, Because they both has different address.
+console.log(person.address == personTwo.address); // False, Because they both has different address.
+console.log(personTwo.address.city); // San Jose
+console.log(person.address.city); // San Jose
+console.log(person.address.city == personTwo.address.city); // true
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -104,6 +104,8 @@ let blogs = [
 ];
 
 // Your code goes here
+
+let cloneBlogs = [...blogs];
 ```
 
 5. Clone the `question` variable into a new variable named `questionClone`
@@ -129,7 +131,16 @@ var questions = [
 ];
 
 // Your code goes here
+
+let questionClone = [...questions 
+{questions.responses} 
+]
+
+
 ```
+ 
+
+
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
 
